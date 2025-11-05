@@ -1,0 +1,106 @@
+"""
+QUICK START GUIDE
+=================
+
+This package contains two main tools for managing folder structures.
+
+FILES:
+------
+1. folder_structure_capture.py   - Scans and saves folder structure to JSON
+2. folder_structure_reconstruct.py - Reads JSON and recreates folder structure
+3. example_demo.py                - Complete working example
+4. README.md                      - Full documentation
+
+
+BASIC USAGE:
+------------
+
+Step 1: Capture your folder structure
+--------------------------------------
+python folder_structure_capture.py /path/to/your/folder -o structure.json
+
+Add --hash flag for file verification:
+python folder_structure_capture.py /path/to/your/folder -o structure.json --hash
+
+
+Step 2: Reconstruct the structure elsewhere
+--------------------------------------------
+# Copy files to match the structure:
+python folder_structure_reconstruct.py structure.json /path/to/new/location -s /path/to/your/folder
+
+# Move files instead of copying:
+python folder_structure_reconstruct.py structure.json /path/to/new/location -s /path/to/your/folder -m move
+
+# Create empty folder structure (directories only, no files):
+python folder_structure_reconstruct.py structure.json /path/to/new/location
+
+
+COMMON USE CASES:
+-----------------
+
+1. BACKUP AND RESTORE
+   # Backup
+   python folder_structure_capture.py ~/my_project -o backup.json --hash
+   
+   # Restore later
+   python folder_structure_reconstruct.py backup.json ~/restored_project -s ~/my_project
+
+
+2. ORGANIZE MESSY FILES
+   # First, create your ideal structure manually in a template folder
+   # Then capture that template
+   python folder_structure_capture.py ~/perfect_structure -o template.json
+   
+   # Apply the template to organize messy files
+   python folder_structure_reconstruct.py template.json ~/organized -s ~/messy_folder
+
+
+3. PROJECT MIGRATION
+   # Capture structure on old system
+   python folder_structure_capture.py ~/old_project -o project.json --hash
+   
+   # Recreate on new system with verification
+   python folder_structure_reconstruct.py project.json ~/new_project -s ~/old_project --verify
+
+
+4. CREATE PROJECT TEMPLATES
+   # Capture a well-organized project as a template
+   python folder_structure_capture.py ~/sample_project -o template.json
+   
+   # Create empty structure for new projects
+   python folder_structure_reconstruct.py template.json ~/new_project
+
+
+PYTHON API:
+-----------
+
+from folder_structure_capture import save_structure
+from folder_structure_reconstruct import reconstruct_structure
+
+# Capture
+save_structure('/source/path', 'output.json', include_hash=True)
+
+# Reconstruct
+reconstruct_structure('output.json', '/target/path', 
+                     source_dir='/source/path', mode='copy')
+
+
+TEST THE TOOLS:
+---------------
+python example_demo.py
+
+
+REQUIREMENTS:
+-------------
+- Python 3.8+
+- No external dependencies (uses only standard library)
+
+
+NOTES:
+------
+- File hashing uses MD5 (fast but not cryptographically secure)
+- Handles duplicate filenames intelligently
+- Preserves file metadata (size, modification time)
+- Catches and logs permission errors
+- Does not follow symbolic links
+"""

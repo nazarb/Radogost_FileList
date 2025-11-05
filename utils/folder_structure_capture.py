@@ -86,7 +86,7 @@ def _scan_recursive(path: Path, include_hash: bool) -> Dict:
         try:
             if item.is_file():
                 file_info = {
-                    "name": item.name,
+                    "Filename": item.name,
                     "size": item.stat().st_size,
                     "modified": datetime.fromtimestamp(item.stat().st_mtime).isoformat()
                 }

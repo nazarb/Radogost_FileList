@@ -73,7 +73,7 @@ class FileDownloader:
         
         # Process files in current directory
         for file_info in tree.get('files', []):
-            filename = file_info['name']
+            filename = file_info['Filename']
             file_path = base_path / filename
             
             # Check if URL exists
@@ -127,7 +127,7 @@ class FileDownloader:
             True if successful, False otherwise
         """
         try:
-            self._log(f"  ↓ Downloading {file_info['name']}...")
+            self._log(f"  ↓ Downloading {file_info['Filename']}...")
             
             # Make request with timeout
             response = requests.get(url, timeout=30, stream=True)

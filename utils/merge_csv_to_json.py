@@ -72,7 +72,7 @@ class FileListEnhancer:
         """
         # Process files in current directory
         for file_info in tree.get('files', []):
-            filename = file_info['name']
+            filename = file_info['Filename']
             
             if filename in self.url_mapping:
                 # Add the new attributes

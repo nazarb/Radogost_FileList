@@ -128,7 +128,7 @@ class FolderReconstructor:
         
         # Process files in current directory
         for file_info in tree["files"]:
-            filename = file_info["name"]
+            filename = file_info["Filename"]
             target_file = target_base / filename
             
             # Find source file

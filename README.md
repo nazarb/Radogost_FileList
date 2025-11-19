@@ -1,7 +1,3 @@
-8d55100e-e330-4a09-8786-63dbf549d414
-
-
-
 # Folder Structure Management Tool
 
 A Python utility for capturing folder structures as JSON and reconstructing them elsewhere.

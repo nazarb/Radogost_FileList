@@ -1,3 +1,5 @@
+https://email.info.n8n.io/e/c/eyJlbWFpbF9pZCI6IlJLTGFCUVVBQVpxYkpZdE9iaGJzMVF0bHVjYWYtUT09IiwiaHJlZiI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTY3OC9zZXR0aW5ncy91c2FnZT9rZXk9OGQ1NTEwMGUtZTMzMC00YTA5LTg3ODYtNjNkYmY1NDlkNDE0IiwiaW50ZXJuYWwiOiJhMmRhMDVjZTAxODc2MmE4ZmJmOTAyIiwibGlua19pZCI6MTM2MH0/dd7d5a5b04bca4ae6c2dc46556e751029d20ed474fff9cb84e6a6fdbb0c97867
+
 # Folder Structure Management Tool
 
 A Python utility for capturing folder structures as JSON and reconstructing them elsewhere.

@@ -476,7 +476,7 @@ def render(context: dict) -> str:
 
 def main():
     p = argparse.ArgumentParser(
-        description="Generate README.md from a Dataverse draft JSON (UnderTheSands style)."
+        description="Generate README.md from a Dataverse template."
     )
     p.add_argument("--input",  default="GKBKTC_draft.json", help="Input JSON file.")
     p.add_argument("--output", default="README.md",         help="Output README file.")

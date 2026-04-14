@@ -117,6 +117,11 @@ This research was funded by / Badania finansowane przez {{ g.grantNumberAgency }
 {{ dsCitation }}
 
 
+## Abstract / Abstrakt:
+{% for d in dsDescriptionValue %}
+{{ d }}
+{% endfor %}
+
 # DATA & FILE OVERVIEW / PRZEGLĄD DANYCH I PLIKÓW
 
 ## File List / Lista plików:
